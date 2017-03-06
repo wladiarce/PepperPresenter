@@ -1,6 +1,6 @@
 # PepperPresenter
-This project will make the robot Pepper able to do presentations by its own from any .pptx file and some instructions given to him by the presentation notes and a software, to emulate what NAO can already do.
+This project makes the robot Pepper (by Aldebaran Robotics) able to do presentations by its own from any .pptx file with available notes.
 
-The project will be held in Python.
+The project is held in Python, and VBA for the PowerPoint extension that allows exporting the slideshow.
 
 Requirements: NAOqi Python SDK

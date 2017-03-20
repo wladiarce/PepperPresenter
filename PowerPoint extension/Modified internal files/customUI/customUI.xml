@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+  <ribbon>
+    <tabs>
+      <tab id="customTab" label="Pepper Robot" >
+        <group id="CustomHelp" label="Pepper Exporter" >
+          <button id="export" visible="true" size="large" 
+                  label="Export presentation to Pepper" 
+                  screentip="Click to start exporting. Check onscreen instuctions" 
+                  onAction="Exporter" image="pepper"/>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

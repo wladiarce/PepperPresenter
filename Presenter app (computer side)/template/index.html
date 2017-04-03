@@ -21,9 +21,16 @@
 
 </head>
 <body>
-	<div class="container">
-		
-		<div class="row"><img src="{{ 'img/pepper.jpg'|staticfile }}" class="thumbnail" width="100%" /></div>
+
+  <div id="presentation_image" class="text-center" style="display: none; height: 100%; width:100%; margin:auto; padding: 5px; border-radius: 2px;">
+    <img id="slide" src="#" height="100%" onclick="PepperApp.present_slide()" />
+  </div>
+
+  <div class="container">
+
+    <div class="row">
+      <img src="{{ 'img/pepper.jpg'|staticfile }}" class="thumbnail" width="100%" />
+    </div>
 	  	
 	  	<div class="page-header">
 	  		<h1>PepperPresenter <small class="accent">App</small></h1>
@@ -39,7 +46,7 @@
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="file">Robot IP:</label>
 							<div class="col-sm-4">
-                <input type="text" class="form-control" name="ip" id="ip" required="true">
+                <input type="text" class="form-control" name="ip" id="ip" required="true" value="192.168.1.142">
               </div>
               <div class="col-sm-4"></div>
 						</div>
@@ -80,9 +87,7 @@
         
 			</div> <!-- middle panel -->
 			
-			<div id="presentation_image" style="position: absolute; top: 0px;left: 0px; height: 100%; display: none;" onclick="this.style.display = 'none'">
-        <img id="slide" src="#" height="100%" />
-      </div>
+			
 		
 		<div style="padding-top: 40px; width: 100%"></div>
 	  	
@@ -92,6 +97,8 @@
 	  	</footer>
 
 	</div> <!-- container -->
+  
+
 	
 </body>
 <!-- -------------------------- END OF BODY -------------------------- -->

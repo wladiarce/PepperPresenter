@@ -6,33 +6,28 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <!-- CUSTOM CSS FOR OVERIDING -->
 	<style>
+
 		html>body {font-family: 'Roboto','Helvetica','Arial',sans-serif!important;  font-weight: 400; line-height: 1.8;}
 		html, body {height: 100%;}
 		a{text-decoration: none !important; color: inherit !important;}
 
-		/* MATERIAL DESIGN COLORS HERE
+		.no-padding{padding: 0 !important;}
 
-		.bg-indigo{background: #3F51B5; color: white;}
-		.bg-pink{background: #e91e63; color: white;}
-		.accent-pink{color: #FF4081}
-		.white{color:#fff !important;}*/
+		/*Background and font colors*/
+		.bg-yellow{background: rgb(255, 235, 59); color: black;}
+		.bg-blue{background: rgb(83, 109, 254); color: white;}
+		.accent-yellow{color: rgb(255, 235, 59) !important; -webkit-filter: none !important;}
+		.white{color:#fff !important;}
+		.custom-color{color: #ff4d4d !important;}
 
-		.bg-picture {background: url('../PepperPresenter/web_assets/img/project.jpg') center / cover;}
-.row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
-  flex-wrap: wrap;
-}
-.row > [class*='col-'] {
-	display: flex;
-	flex-direction: column;
-}
+		.bg-picture {background: url('../Showcase WEB/web_assets/img/project.jpg') center / cover;}
+		
+		/*Vertical columns same height*/
+		.vertical-align {display: flex;align-items: center;}
+		.row {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display:flex;flex-wrap: wrap;}
+		.row > [class*='col-'] {display: flex;flex-direction: column;}
 
-@media only screen and (max-width: 767px){
-	.fullw{width: 100%;}
-}
+		@media only screen and (max-width: 767px){.fullw{width: 100%;}}
 
 	</style>
 
@@ -51,15 +46,17 @@
 </head>
 <!-- _______________________Start of the body____________________ -->
 <body>
-	<div class="container-fluid no-padding" style="height: 100%; width: 100%; position: absolute;">
-	<div class="row no-margin fill">
-
-
-		<div class="col-md-12 bg-picture" style="height: 100%"> </div>
-
-	
-	</div>  <!-- CLOSES ROW --> 
-	</div>	<!-- CLOSES CONTAINER FLUID --> 
+	<div class="jumbotron bg-picture vertical-align text-center no-padding" style="min-height: 100%;width: 100%;">
+		<div class="text-center" style="width: 100%">
+		<h1 class="custom-color text-center" style="font-weight: 700; font-size: 120px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"><i>Pepper Presenter App</i></h1>
+		<p ><span class="glyphicon glyphicon-chevron-down custom-color" style="font-size: 50px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
+		</div>
+	</div>	<!-- CLOSES CONTAINER FLUID OF HEAD--> 
+	<div class="container-fluid no-padding">
+		<div class="row">
+			
+		</div>
+	</div>
 </body>
 </html>
 

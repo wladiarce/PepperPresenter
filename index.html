@@ -18,14 +18,18 @@
 		.bg-blue{background: rgb(83, 109, 254); color: white;}
 		.accent-yellow{color: rgb(255, 235, 59) !important; -webkit-filter: none !important;}
 		.white{color:#fff !important;}
+		.black{color:#000 !important;}
 		.custom-color{color: #ff4d4d !important;}
+		.bg-custom{background: #ff4d4d; color: white;}
 
 		.bg-picture {background: url('../PepperPresenter/web_assets/img/project.jpg') center / cover;}
-		
+		.container{padding-top: 30px; padding-bottom: 30px;}
+		.first-item{padding-top: 50px; padding-bottom: 50px;}
 		/*Vertical columns same height*/
 		.vertical-align {display: flex;align-items: center;}
 		.row {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display:flex;flex-wrap: wrap;}
 		.row > [class*='col-'] {display: flex;flex-direction: column;}
+		/*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
 
 		@media only screen and (max-width: 767px){.fullw{width: 100%;}}
 
@@ -48,16 +52,49 @@
 <body>
 	<div class="jumbotron bg-picture vertical-align text-center no-padding" style="min-height: 100%;width: 100%;">
 		<div class="text-center" style="width: 100%">
-		<h1 class="custom-color text-center" style="font-weight: 700; font-size: 120px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"><i>Pepper Presenter App</i></h1>
-		<p ><span class="glyphicon glyphicon-chevron-down custom-color" style="font-size: 50px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"></span></p>
+			<h1 class="custom-color text-center" style="font-weight: 700; font-size: 72px; "><i>Pepper Presenter App</i></h1>
+			<p ><span class="glyphicon glyphicon-chevron-down custom-color" style="font-size: 50px;"></span></p>
 		</div>
 	</div>	<!-- CLOSES CONTAINER FLUID OF HEAD--> 
-	<div class="container-fluid no-padding">
-		<div class="row">
+	
+	<!-- body -->
+	<div class="container">
+			<div class="col-md-12 text-center custom-color">
+				<h1 style="font-weight: 600;">Using a social robot to support <i>PowerPoint</i> presentations</h1>
+				<h4 class="black" style="padding-top: 20px;">With the colaboration of&nbsp;&nbsp;&nbsp;<a href="https://www.brubotics.eu/"><img src="../PepperPresenter/web_assets/img/brubotics.jpg" width="150px" /></a></h4>
+			</div>
+	</div>
+	
+	<div class="container-fluid bg-custom text-center">
+		<div class="container">	
+			<a href="https://github.com/wladiarce/PepperPresenter" target="__blank">
+			<div class="col-md-4 text-center">
+				<p><i class="fa fa-github fa-4x" style="padding-top: 40px;" ></i></p>
+				<h3>Check the project at GitHub</h3>
+				
+			</div>
+			</a>
+			<div class="col-md-4 text-center">
+				<p><i class="fa fa-cloud-download fa-4x" style="padding-top: 40px;" ></i></p>
+				<h3>Download the application</h3>
+			</div>
 			
+			<div class="col-md-4 text-center" >
+				<p><i class="fa fa-file-text fa-4x" style="padding-top: 40px;" ></i></p>
+				<h3>Look at the project report</h3>
+			</div>
 		</div>
 	</div>
 
+	<div class="container custom-color ">	
+			<div class="col-md-8"><h1>Pepper, the social robot</h1></div>
+			<div class="col-md-4"><img src="../PepperPresenter/web_assets/img/pepper.jpg" width="100%" class="img-thumbnail" /></div>
+	</div>
+
+	<!-- FOOTER -->
+	<div class="container-fluid  bg-custom text-center" ><h5>w.designs</h5></div>
 </body>
 </html>
 
+<!-- 
+ -->

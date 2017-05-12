@@ -65,6 +65,78 @@
               </div>
               <div class="col-sm-4"></div>
             </div>
+
+<script type="text/javascript">
+    function ShowHideDiv(my_checkbox) {
+        var my_div = document.getElementById("gesturing");
+        my_div.style.display = my_checkbox.checked ? "block" : "none";
+    }
+</script>
+
+            <div class="form-group">
+              <div class="col-sm-offset-4 col-sm-8">
+              <div class="checkbox"><label><input type="checkbox" name="enable_point" id="enable_point" onclick="ShowHideDiv(this)">Enable pointing - Activate only if pointing has been implemented in the notes</label></div>
+              </div>
+            </div>
+            
+            <div id="gesturing" style="display: none">
+                      <div class="row" style="padding-top: 20px;">
+                        <div class="col-sm-4"></div><div class="col-sm-8"> Fill all data as positive numbers. The decimal separator is the dot '.'</div>
+                      </div>
+                      <div class="row" style="padding-top: 20px;">
+                        <div class="col-sm-offset-4 col-sm-4">With respect to Pepper, the screen is at its:</div>
+                        <div class="col-sm-4">
+                          <label class="radio-inline">
+                            <input type="radio" name="side">Left
+                          </label>
+                          <label class="radio-inline">
+                            <input type="radio" name="side">Right
+                          </label>
+                        </div>
+                      </div>
+                      <div class="row" style="padding-top: 20px;">
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <div class="control-label col-sm-6">Screen height (m):</div>
+                            <div class="col-sm-6"><input type="text" class="form-control" name="screen-height"></div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <div class="control-label col-sm-6">Screen width(m):</div>
+                            <div class="col-sm-6"><input type="text" class="form-control" name="screen-width"></div>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <div class="control-label col-sm-6">X (m):</div>
+                            <div class="col-sm-6"><input type="text" class="form-control" name="x"></div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <div class="control-label col-sm-6">Y (m):</div>
+                            <div class="col-sm-6"><input type="text" class="form-control" name="y"></div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <div class="control-label col-sm-6">Z (m):</div>
+                            <div class="col-sm-6"><input type="text" class="form-control" name="z"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-offset-2 col-sm-8"><img class="img-responsive" src="{{ 'img/SCREEN.png'|staticfile }}" /></div>
+                      </div>
+              
+           
+
+            </div>
 						
             <div class="col-sm-offset-4 col-sm-8">
               <button type="sumbit" name="submit" value="Submit" id="form_submit" class="btn btn-default bg-base">Start presentation</button>

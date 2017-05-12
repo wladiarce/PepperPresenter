@@ -23,7 +23,8 @@
 		.bg-custom{background: #ff4d4d; color: white;}
 
 		.bg-picture {background: url('../PepperPresenter/web_assets/img/project.jpg') center / cover;}
-		.container{padding-top: 30px; padding-bottom: 30px;}
+		.container{padding-top: 30px; padding-bottom: 30px; visibility: hidden;}
+		.container-fluid{visibility: hidden;}
 		.first-item{padding-top: 50px; padding-bottom: 50px;}
 		/*Vertical columns same height*/
 		.vertical-align {display: flex;align-items: center;}
@@ -46,6 +47,8 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <!-- FONT-AWESOME -->
 	<script src="https://use.fontawesome.com/4a771014e8.js"></script>
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
 
 </head>
 <!-- _______________________Start of the body____________________ -->
@@ -53,15 +56,16 @@
 	<div class="jumbotron bg-picture vertical-align text-center no-padding" style="min-height: 100%;width: 100%;">
 		<div class="text-center" style="width: 100%">
 			<h1 class="custom-color text-center" style="font-weight: 700; font-size: 72px; "><i>Pepper Presenter App</i></h1>
-			<p ><span class="glyphicon glyphicon-chevron-down custom-color" style="font-size: 50px;"></span></p>
+			<p><a href="#start"><span class="glyphicon glyphicon-chevron-down custom-color" style="font-size: 50px;"></span></a></p>
 		</div>
 	</div>	<!-- CLOSES CONTAINER FLUID OF HEAD--> 
 	
 	<!-- body -->
-	<div class="container">
+	<div class="container" id="start">
 			<div class="col-md-12 text-center custom-color">
-				<h1 style="font-weight: 600;">Using a social robot to support <i>PowerPoint</i> presentations</h1>
-				<h4 class="black" style="padding-top: 20px;">With the colaboration of&nbsp;&nbsp;&nbsp;<a href="https://www.brubotics.eu/"><img src="../PepperPresenter/web_assets/img/brubotics.jpg" width="150px" /></a></h4>
+				<h1 style="font-weight: 600; font-size: 42px">Using a social robot to support <i>PowerPoint</i> presentations</h1>
+				<h4 style="padding-top: 15px;"><span class="black">By</span> Wladi Arce</h4>
+				<h4 class="black" style="padding-top: 10px;">With the collaboration of <a href="https://www.brubotics.eu/"><img src="../PepperPresenter/web_assets/img/brubotics.jpg" width="150px" style="padding-left: 10px;" /></a></h4>
 			</div>
 	</div>
 	
@@ -87,18 +91,86 @@
 	</div>
 
 	<div class="container custom-color ">	
-			<div class="col-md-8"><h1>Pepper, the social robot</h1></div>
-			<div class="col-md-4"><img src="../PepperPresenter/web_assets/img/pepper.jpg" width="100%" class="img-thumbnail" /></div>
+		<div class="row">	
+			<div class="col-md-8">
+				<h1><b>Pepper</b>, a social robot</h1>
+				<h4 style="text-align:justify"> Pepper is a 120 cm tall humanoid robot capable of interacting with humans in an autonomous way.</h4><h4 style="text-align:justify">The robot is social, meaning that it is able to understand and express emotions and personalities, acting in a consequent manner according to the situation.</h4>
+			</div>
+			<div class="col-md-4"><img src="../PepperPresenter/web_assets/img/pepper.jpg" width="100%" class="img-responsive" /></div>
+		</div>
 	</div>
+
+	<div class="container no-padding no-margin bg-custom " style="height: 3px; border-radius: 1px;"></div>
+
+	<div class="container custom-color">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>The application, <b><i>Pepper Presenter App</i></b></h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12"><img src="../PepperPresenter/web_assets/img/system_scheme.png" width="100%" class="img-responsive" /></div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h4 style="text-align:justify">The image above is a quick introduction on how the application works.</h4>
+				<h4 style="text-align:justify">Written in <i>Python</i>, and running from any machine with <i>Python 2.7</i> and the necessary dependencies available, it controls remotely the robot, making it present the <i>PowerPoint</i>: Pepper will tell the story found in the presentation notes while gesturing and expressing emotions.</h4>
+				<h4 style="text-align:justify">As extra functionalities, the robot is also gifted with extra behaviours, triggered by the user by adding in the presentation notes [bracketed] instructions or emoticons. Thanks to that, Pepper will also be able to show emotions during a sentence or point in a determined zone of the screen to attract the attention there.</h4>
+				<h4 style="text-align:justify">To perform those extra functionalities, a PowerPoint add-in is included with the app, letting the designer export the presentation in a way the Presenter Application can understand.</h4>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid bg-custom">
+		<div class="container">	
+			<div class="row"><h1>In detail</h1></div>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>Requierements:</h3>
+					A LAN where both the robot and the computer are connected is necessary
+					<ul><h4>Presenter app</h4>
+						<h5><li>Python 2.7</li>
+						<li>naoqi Python SDK</li>
+						<li>Python modules: python-pptx, lxml, htmlPy, PySide</li></h5>
+					</ul>
+					<ul><h4>Exporter app</h4>
+						<h5><li>PowerPoint 2007 and above</li></h5>
+					</ul>
+				</div>
+				<div class="col-md-6">
+					<h3>User defined behaviours:</h3>
+					<ul><h4>Emotions</h4>Adding those icons in the text, the robot will express such emotion
+						<h5>
+						<li>:) - happiness</li>
+						<li>:( - sadness</li>
+						<li>:| - indiference</li>
+						</h5>
+					</ul>
+					<ul><h4>Pointing</h4>Adding this bracketed pseudo-code, the robot will point to a determined screen zone (x = 1 to 4)
+						<h5><li>[point=x]</li></h5>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container custom-color ">	
+		<div class="row">	
+		<h1>Some pictures</h1>
+			<div class="col-md-4"></div>
+			<div class="col-md-4"></div>
+			<div class="col-md-4"><img src="../PepperPresenter/web_assets/img/pepper.jpg" width="100%" class="img-responsive" /></div>
+		</div>
+	</div>
+
+
 
 	<!-- FOOTER -->
 	<div class="container-fluid  bg-custom text-center" ><h5>w.designs</h5></div>
+
+	<script>window.sr = ScrollReveal();sr.reveal('.container');sr.reveal('.container-fluid');</script>
 </body>
 </html>
 
 <!-- 
-<<<<<<< HEAD
  -->
-=======
- -->
->>>>>>> origin/master
